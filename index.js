@@ -1,9 +1,12 @@
 var express = require('express');
 var app = express();
 
+var ip = require("ip");
+var ipadd = ip.address()
+console.dir ( ip.address() );
 
 app.get('/', function(req, res) {
-  res.send('hi chunuts');
+  res.send(`fortune of the day coming soon. page is hosted at ${ipadd}`);
 });
 
 app.listen(3000, function() {
